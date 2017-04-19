@@ -8,6 +8,14 @@ p, ul, h1, h2, h3, h4, h5 {
   font-size: 1em;
 }
 
+main {
+  display: none;
+}
+
+main.active {
+  display: block;
+}
+
 .board {
   width: 90%;
   height: 100vh;
@@ -83,6 +91,8 @@ p, ul, h1, h2, h3, h4, h5 {
 }
 
 .loader .cont {
+  width: 100%;
+  text-align: center;
   margin: auto;
 }
 
@@ -95,8 +105,17 @@ p, ul, h1, h2, h3, h4, h5 {
 .loader span {
   font-family: courier;
   display: block;
-  /*margin-top: 0.33em;*/
+  text-align: center;
   animation: loader-flash 0.33s steps(1, end) infinite alternate;
+}
+
+.loader.ready .cont {
+
+}
+
+.loader.ready span {
+  animation: none;
+  cursor: pointer;
 }
 
 .loader svg path {
