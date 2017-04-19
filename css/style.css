@@ -1,0 +1,77 @@
+html, body {
+  height: 100%;
+}
+
+.loader {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+}
+
+.loader .cont {
+  margin: auto;
+}
+
+.loader svg {
+  width: 80px;
+  height: 120px;
+  overflow: visible;
+}
+
+.loader span {
+  font-family: courier;
+  display: block;
+  /*margin-top: 0.33em;*/
+  animation: loader-flash 0.33s steps(1, end) infinite alternate;
+}
+
+.loader svg path {
+  animation: loader-wave 3s infinite;
+}
+
+.loader svg path:nth-of-type(1) {
+  animation-delay: 0.2s;
+}
+.loader svg path:nth-of-type(2) {
+  animation-delay: 0.0s;
+}
+.loader svg path:nth-of-type(3) {
+  animation-delay: -0.2s;
+}
+.loader svg path:nth-of-type(4) {
+  animation-delay: -0.4s;
+}
+.loader svg path:nth-of-type(5) {
+  animation-delay: -0.6s;
+}
+
+@keyframes loader-wave {
+  0% {
+    transform: translateY(15px);
+  }
+  25% {
+    transform: translateY(-15px);
+  }
+  50% {
+    transform: translateY(0px);
+  }
+  80% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(15px);
+  }
+}
+
+@keyframes loader-flash {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
