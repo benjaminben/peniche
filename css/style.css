@@ -91,7 +91,6 @@ main.active {
 }
 
 .loader .cont {
-  width: 100%;
   text-align: center;
   margin: auto;
 }
@@ -113,6 +112,9 @@ main.active {
 
 .loader.ready span {
   animation: none;
+}
+
+.loader.ready .cont {
   cursor: pointer;
 }
 
