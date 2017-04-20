@@ -100,17 +100,15 @@ main.active {
   width: 80px;
   height: 120px;
   overflow: visible;
+  display: block;
+  margin: 0 auto;
 }
 
 .loader span {
   font-family: courier;
-  display: block;
+  display: inline-block;
   text-align: center;
   animation: loader-flash 0.33s steps(1, end) infinite alternate;
-}
-
-.loader.ready .cont {
-
 }
 
 .loader.ready span {
